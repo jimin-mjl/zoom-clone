@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Noom
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body
+        header
+            h1 Random Chat
+        main
+            h2 Welcome to Free Random Chat
+            form#nickname-form
+                h3 Set Your Nickname First 😉
+                input(type="text", placeholder="Set your nickname...")
+                input(type="submit", value="Confirm") 
+            form#message-form(style="display:none;")
+                h3 Start Random Chat 😀
+                input(type="text", placeholder="Send a message...") 
+                input(type="submit", value="Send")
+            ul#chat-list
+        script(src="/public/app.js") 
