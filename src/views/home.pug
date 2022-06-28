@@ -10,14 +10,18 @@ html(lang="en")
         header
             h1 Random Chat
         main
-            h2 Welcome to Free Random Chat
-            form#nickname-form
-                h3 Set Your Nickname First 😉
-                input(type="text", placeholder="Set your nickname...")
-                input(type="submit", value="Confirm") 
-            form#message-form(style="display:none;")
-                h3 Start Random Chat 😀
+            h2 Welcome to Free Chat!
+            p#notification
+            form#room-form
+                h3 Select or Create a Chat Room 🤟
+                input(type="text", placeholder="Type your room name...")
+                input(type="submit", value="Enter") 
+            form#message-form(hidden=true)
+                h3
                 input(type="text", placeholder="Send a message...") 
                 input(type="submit", value="Send")
+            button(hidden=true) Change Nickname
             ul#chat-list
+            ul#room-list
+        script(src="/socket.io/socket.io.js") 
         script(src="/public/app.js") 
